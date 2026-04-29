@@ -1,0 +1,10 @@
+{
+    "name": "demo-npm",
+    "description": "A tiny NPM package manifest with a few dependencies.",
+    "dependencies": {
+        "express": "latest"
+    },
+    "devDependencies": {
+        "shx": "latest"
+    }
+}

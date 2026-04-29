@@ -1,0 +1,16 @@
+version: 2
+updates:
+  # 1) Daily updates for GitHub Actions dependencies
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    groups:
+      actions-dependencies:
+        update-types:
+          - "major"
+          - "minor"
+          - "patch"
+        patterns:
+          - ".*"
+  # 2) No updates for any other languages, to prove that this is overriding auto-detect

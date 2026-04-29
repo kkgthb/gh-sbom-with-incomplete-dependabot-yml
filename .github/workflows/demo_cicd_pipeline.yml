@@ -1,0 +1,25 @@
+name: "Demo"
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  job_1:
+    runs-on: "ubuntu-latest"
+    name: "First job.  Adjacent jobs run in parallel by default."
+    steps:
+      - id: "checkout_repo"
+        name: "Checkout this repo"
+        uses: "actions/checkout@v6"
+      - id: "echo_repo_file_count"
+        name: 'Display some sysout text, showing how many files are in the repo'
+        shell: "bash"
+        run: |
+          echo "This is a debugging step to help validate what is in inside the repo root folder."
+          echo "Top-level subdirectories in repo root:"
+          find "." -mindepth 1 -maxdepth 1 -type d | wc -l
+          echo "Total files in repo root (recursively):"
+          find "." -type f | wc -l
+          echo "Here's a sample of the files:"
+          find "." -type f | head -5
