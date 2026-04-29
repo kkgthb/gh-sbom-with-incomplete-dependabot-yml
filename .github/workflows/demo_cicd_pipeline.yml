@@ -22,4 +22,4 @@ jobs:
           echo "Total files in repo root (recursively):"
           find "." -type f | wc -l
           echo "Here's a sample of the files:"
-          find "." -type f | head -5
+          find "." -type f | head -2
