@@ -11,7 +11,7 @@ jobs:
     steps:
       - id: "checkout_repo"
         name: "Checkout this repo"
-        uses: "actions/checkout@v6"
+        uses: "actions/checkout@v7"
       - id: "echo_repo_file_count"
         name: 'Display some sysout text, showing how many files are in the repo'
         shell: "bash"
